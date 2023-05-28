@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container{
+    background-image: url("bg.JPG");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    background: linear-gradient(to right, indianred,lightblue);
+    color: indigo;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: indigo;
+    color: indianred;
+    transform: scale(1.2);
+    transition: all 700ms ease-in-out;
+}
+
+.popup{
+    width: 400px;
+    background: lightsteelblue;
+    border-radius: 6px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: indianred;
+    visibility: hidden;
+    transition:transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.popup img{
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .9);
+}
+
+.popup h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 30px 0 10px;
+    color: indigo;
+}
+
+.popup p{
+    color: slateblue;
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+}
+
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: indigo;
+    color: indianred;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .9);
+}
+
+.popup button:hover{
+    background: indianred;
+    color: indigo;
+    transform: scale(1.2);
+    transition: all 700ms ease-in-out;
+
+}
+
+
+@media (max-width: 500px) {
+    .popup{
+        width: 350px;
+    }
+
+    .popup h2{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 420px) {
+    .popup{
+        width: 80vw;
+    }
+
+    .btn{
+        width: 75vw;
+    }
+}
+
+@media (max-width: 368px) {
+    .btn{
+        width: 70vw;
+        font-size: 10px;
+    }
+
+    .popup{
+        width: 75vw;
+    }
+
+    .popup h2{
+        font-size: 20px;
+    }
+}
